@@ -1,10 +1,10 @@
 # Model Description
 
-The Question-Answering GPT is an open source Generative Pre-Trained Transformer model with 160M Parameters which has been trained on a larg corpus of Open Web text data as well as been trained for Open Book Generative Question-Answering Task. This Model has shown impressive performance in terms of Generative Question Answering compared to GPT-3. When given same context and question to GPT-3 and QNA-GPT the answers provide by both the models were quiet similar.
+The Question-Answering GPT is an open source Generative Pre-Trained Transformer model with 160M Parameters which has been trained on a larg corpus of Open Web text data as well as been trained for Open Book Generative Question-Answering Task. This Model has shown impressive performance in terms of Generative Question Answering compared to GPT-3. When given same context and question to GPT-3 and GPT-q the answers provide by both the models were quiet similar.
 
 # Training Limitations
 
-The model was already been trained on a downstream task which is Open Book Abstractive Question-Answering. On fine-tuning this model on any dataset will completly overwrite its abilities, So if you want to fine-tune the model we will be uploading the Generative model of QNA-GPT.
+The model was already been trained on a downstream task which is Open Book Abstractive Question-Answering. On fine-tuning this model on any dataset will completly overwrite its abilities, So if you want to fine-tune the model we will be uploading the Generative model of GPT-q.
 
 # Use Case
 
@@ -15,7 +15,7 @@ The Model is already been trained on a downstream task as mentioned before, So O
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-model_checkpoints = "ragnarOk321/QA-GPT"
+model_checkpoints = "ragnarOk321/GPT-q-160M"
 model = AutoModelForSeq2SeqLM.from_pretrained(model_checkpoints)
 tokenizer = AutoTokenizer.from_pretrained(model_checkpoints)
 
